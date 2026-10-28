@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/a2z2913/vp-research-core/schemas/geography.schema.json",
+  "title": "Resolved election geography",
+  "type": "object",
+  "required": ["state", "county"],
+  "properties": {
+    "state": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "county": {"type": "string", "minLength": 1},
+    "municipality": {
+      "type": "object",
+      "required": ["resolved", "name"],
+      "properties": {
+        "resolved": {"type": "boolean"},
+        "name": {"type": "string"},
+        "sourceURL": {"type": "string", "format": "uri"},
+        "checked": {"type": "string", "format": "date"}
+      },
+      "additionalProperties": true
+    },
+    "precinct": {
+      "type": "object",
+      "required": ["sourceURL"],
+      "properties": {
+        "id": {"type": "string"},
+        "split": {"type": "string"},
+        "sourceURL": {"type": "string", "format": "uri"},
+        "boundary_vintage": {"type": "string"},
+        "election_date": {"type": "string", "format": "date"}
+      },
+      "additionalProperties": true
+    },
+    "mapDistricts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "number", "matchable", "sourceURL"],
+        "properties": {
+          "kind": {"type": "string", "minLength": 1},
+          "number": {"type": "string", "minLength": 1},
+          "matchable": {"type": "boolean"},
+          "sourceURL": {"type": "string", "format": "uri"},
+          "boundary_vintage": {"type": "string"},
+          "checked": {"type": "string", "format": "date"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

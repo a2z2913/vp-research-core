@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/a2z2913/vp-research-core/schemas/crosswalk.schema.json",
+  "title": "Election geography crosswalk record",
+  "type": "object",
+  "required": ["from_kind", "from_value", "to_kind", "to_value", "boundary_vintage", "source_id", "source_url"],
+  "properties": {
+    "from_kind": {"type": "string", "minLength": 1},
+    "from_value": {"type": "string", "minLength": 1},
+    "to_kind": {"type": "string", "minLength": 1},
+    "to_value": {"type": "string", "minLength": 1},
+    "boundary_vintage": {"type": "string", "minLength": 1},
+    "effective_start": {"type": "string", "format": "date"},
+    "effective_end": {"type": "string", "format": "date"},
+    "election_date": {"type": "string", "format": "date"},
+    "source_id": {"type": "string", "minLength": 1},
+    "source_url": {"type": "string", "format": "uri"}
+  },
+  "additionalProperties": false
+}

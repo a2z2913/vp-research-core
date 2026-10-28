@@ -1,0 +1,33 @@
+[
+  {
+    "id": "synthetic-split",
+    "match": {
+      "kind": "precinct_split_set",
+      "sourceURL": "https://example.invalid/elections/2026/precincts",
+      "knownValues": ["P-014.1", "P-014.2"],
+      "values": ["P-014.2"]
+    }
+  },
+  {
+    "id": "synthetic-house-district",
+    "match": {
+      "kind": "sldl",
+      "value": "42"
+    }
+  },
+  {
+    "id": "synthetic-overlap",
+    "match": {
+      "kind": "community_district",
+      "values": ["River"],
+      "allowOverlap": true
+    }
+  },
+  {
+    "id": "synthetic-unknown-boundary",
+    "match": {
+      "kind": "school_district",
+      "value": "7"
+    }
+  }
+]

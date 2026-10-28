@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/a2z2913/vp-research-core/schemas/candidate_source.schema.json",
+  "title": "Candidate source-review record",
+  "type": "object",
+  "required": ["candidate_source_id", "state", "candidate_name", "office", "geographic_scope", "review_outcome", "evidence_class", "position_evidence"],
+  "properties": {
+    "candidate_source_id": {"type": "string", "pattern": "^candidate-source-[a-f0-9]{16}$"},
+    "state": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "candidate_name": {"type": "string", "minLength": 1},
+    "office": {"type": "string", "minLength": 1},
+    "geographic_scope": {"type": "string", "minLength": 1},
+    "review_outcome": {"type": "string", "minLength": 1},
+    "campaign_url": {"type": "string"},
+    "reviewed_on": {"type": "string", "format": "date"},
+    "official_election_record": {"type": "string"},
+    "source_id": {"type": "string"},
+    "evidence_class": {"const": "candidate_identity_and_source_review"},
+    "position_evidence": {"const": "unknown"}
+  },
+  "additionalProperties": false
+}

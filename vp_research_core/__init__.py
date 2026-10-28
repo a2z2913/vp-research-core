@@ -11,6 +11,13 @@ from .matching import (
     rank_candidates,
     tally,
 )
+from .geography import (
+    CrosswalkResult,
+    canonical_identifier,
+    match_records,
+    match_rule,
+    resolve_crosswalk,
+)
 
 __all__ = [
     "MatchScore",
@@ -22,5 +29,10 @@ __all__ = [
     "position_of",
     "rank_candidates",
     "tally",
+    "CrosswalkResult",
+    "canonical_identifier",
+    "match_records",
+    "match_rule",
+    "resolve_crosswalk",
 ]
 

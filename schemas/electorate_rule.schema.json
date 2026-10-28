@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/a2z2913/vp-research-core/schemas/electorate_rule.schema.json",
+  "title": "Tri-state electorate rule",
+  "$defs": {
+    "rule": {
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": {"type": "string", "minLength": 1},
+        "value": {"type": ["string", "number"]},
+        "values": {"type": "array", "items": {"type": ["string", "number"]}},
+        "knownValues": {"type": "array", "items": {"type": ["string", "number"]}},
+        "sourceURL": {"type": "string", "format": "uri"},
+        "city": {"type": "string"},
+        "allowOverlap": {"type": "boolean"},
+        "rules": {"type": "array", "items": {"$ref": "#/$defs/rule"}}
+      },
+      "additionalProperties": false
+    }
+  },
+  "$ref": "#/$defs/rule"
+}

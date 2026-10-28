@@ -1,0 +1,26 @@
+[
+  {
+    "from_kind": "precinct_split",
+    "from_value": "P-014.2",
+    "to_kind": "community_district",
+    "to_value": "North",
+    "boundary_vintage": "synthetic-2026",
+    "effective_start": "2026-01-01",
+    "effective_end": "2026-12-31",
+    "election_date": "2026-11-03",
+    "source_id": "SYNTHETIC-1",
+    "source_url": "https://example.invalid/crosswalk/2026"
+  },
+  {
+    "from_kind": "precinct_split",
+    "from_value": "P-014.2",
+    "to_kind": "community_district",
+    "to_value": "River",
+    "boundary_vintage": "synthetic-2026",
+    "effective_start": "2026-01-01",
+    "effective_end": "2026-12-31",
+    "election_date": "2026-11-03",
+    "source_id": "SYNTHETIC-1",
+    "source_url": "https://example.invalid/crosswalk/2026"
+  }
+]

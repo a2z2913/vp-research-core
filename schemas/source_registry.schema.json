@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/a2z2913/vp-research-core/schemas/source_registry.schema.json",
+  "title": "Curated election source registry record",
+  "type": "object",
+  "required": ["source_id", "state", "jurisdiction", "content_areas", "organization", "description", "url", "authority"],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "state": {"type": "string", "pattern": "^(?:[A-Z]{2}|Shared / multiple states)$"},
+    "jurisdiction": {"type": "string", "minLength": 1},
+    "content_areas": {"type": "string", "minLength": 1},
+    "organization": {"type": "string"},
+    "description": {"type": "string"},
+    "url": {"type": "string", "format": "uri"},
+    "authority": {"type": "string"},
+    "source_checked_at": {"type": "string", "format": "date"},
+    "hostname": {"type": "string"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,35 @@
+{
+  "exclusions": [
+    "internal build-use fields and page-usage counts",
+    "evidence and follow-up notes",
+    "unconfirmed candidate URLs",
+    "candidate position claims",
+    "addresses, coordinates, user records, and QA inputs",
+    "candidate arrays and presentation content from the production catalog"
+  ],
+  "file_sha256": {
+    "candidate_sources.csv": "296d8228cb2257497507a01c7746784af7b0508d35dc9acefcfd2a2d4cf64a66",
+    "electorate_rules.jsonl": "9760d4e0ce46ee885561f3125dd68cb53ec920647e7d1decca939502ba9fb5fe",
+    "geographic_sources.csv": "e6645d8216bcd4e86e5863665431e72b131f1531b0d368f95e2c172dd7caca22",
+    "qa_summary.json": "a9fd036d1aae70c1365cef95acc3d7e1912445687f1edf9a088f3d291aaf35e5",
+    "source_registry.csv": "49be91fd3ad9d854d86ff20b036ea5ee8e07be555e3007bb9d0fc27eecbd92f9"
+  },
+  "generated_at": "2026-10-28T17:40:31Z",
+  "production_source_revision": "3f2e95f953198f46f12e205ea8a42960b993b785",
+  "record_counts": {
+    "candidate_sources": 3117,
+    "electorate_rules": 2463,
+    "geographic_sources": 390,
+    "source_registry": 1900
+  },
+  "workbook": {
+    "download_sha256": "3ce56407f1256ed4cbcae050a1c2f94a147332ffcb0cfc91e7f8b0ed980bdccd",
+    "modified_at": "2026-10-28T15:39:55.258Z",
+    "reported_summary": {
+      "Branch / commit": "main / f983abb898a38f259b4af6cad046186754dbfee2",
+      "Inventory date (UTC)": "2026-10-23T12:00:00.000Z",
+      "Version audited": "October 23 Collier feed correction and targeted daily review"
+    },
+    "title": "VotersPulse Website Sources+Links.xlsx"
+  }
+}

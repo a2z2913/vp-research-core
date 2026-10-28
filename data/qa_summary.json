@@ -1,0 +1,60 @@
+{
+  "as_of": "2026-10-28T10:36:00-04:00",
+  "code_revision": "3f2e95f953198f46f12e205ea8a42960b993b785",
+  "scope": "Sanitized source-level QA evidence; not a universal accuracy or coverage result",
+  "tracker": {
+    "spreadsheet_id": "1apfr127J7u7k6yY2HfPVBHELXPpuA2iEul-46k72PCY",
+    "modified_at": "2026-10-28T14:36:54.909Z",
+    "latest_review_status": "Partial",
+    "active_issue_denominator": 7,
+    "active_issues_by_tracker_area": {
+      "FL": 4,
+      "SE": 1,
+      "TX": 2
+    },
+    "active_issue_classes": [
+      "Collier and Okeechobee exact-split ballot/electorate or retirement evidence",
+      "bounded campaign ownership/source review",
+      "Texas public-source availability monitoring",
+      "specific remaining Southeast electorate coverage"
+    ]
+  },
+  "checks": [
+    {
+      "id": "north-port-street-normalization",
+      "source_evidence_sha256": "ae80827bd86662b7081c059e483f6ae8247bdd6dc904bf331daca6543bceafda",
+      "source_checked_on": "2026-10-28",
+      "authoritative_sources": [
+        "https://www25.swfwmd.state.fl.us/arcgis12/rest/services/BaseVector/parcel_search/MapServer/15",
+        "https://www.voterfocus.com/PrecinctFinder/addressSearch?county=FL-SAR"
+      ],
+      "expected_value_basis": "Three independently classified residential parcels and exact county election-detail responses",
+      "private_input_hash": null,
+      "private_input_hash_note": "Residential inputs were processed in memory and intentionally not retained or hashed; a coordinate or address hash would not anonymize them.",
+      "pre_fix": {"passed": 0, "failed": 3, "denominator": 3},
+      "post_fix": {"passed": 9, "failed": 0, "denominator": 9, "stages": ["local", "preview", "production"]},
+      "limitations": "Reproduces one scoped street-normalization defect; it does not establish universal Sarasota coverage or retest the original household."
+    },
+    {
+      "id": "the-colony-place-isolation",
+      "source_evidence_sha256": "245ed603a99660d52b2f41bdfeab7d1bd256b9c5e17d20e7759ddcd381fc1bc6",
+      "source_checked_on": "2026-10-28",
+      "authoritative_sources": [
+        "https://www.thecolonytx.gov/CivicSend/ViewMessage/message/302727",
+        "https://www.thecolonytx.gov/1451/Election-2026",
+        "https://www.thecolonytx.gov/DocumentCenter/View/17783/Candidate-Filing-List-November-3-2026-General-Election-081026"
+      ],
+      "expected_value_basis": "Official city publication chain and four independently specified council-place expectations",
+      "local_place_isolation": {"passed": 4, "failed": 0, "denominator": 4},
+      "production_public_control": {"passed": 1, "failed": 0, "denominator": 1},
+      "limitations": "The county final-list endpoint was not inspected; this is not a claim about ballot order or exhaustive absence of withdrawals."
+    },
+    {
+      "id": "current-open-style-gaps",
+      "source_checked_on": "2026-10-28",
+      "collier_exact_splits": {"resolved": 0, "unresolved": 14, "denominator": 14},
+      "okeechobee_exact_splits": {"resolved": 0, "unresolved": 11, "denominator": 11},
+      "limitations": "Accessible maps and partial evidence do not establish complete local-contest scope, current replacement, or retirement for these exact splits."
+    }
+  ]
+}

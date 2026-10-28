@@ -1,0 +1,33 @@
+{
+  "state": "EX",
+  "county": "ex-example",
+  "municipality": {
+    "resolved": true,
+    "name": "City of Exampleville"
+  },
+  "precinct": {
+    "id": "P-014",
+    "split": "P-014.2",
+    "sourceURL": "https://example.invalid/elections/2026/precincts"
+  },
+  "mapDistricts": [
+    {
+      "kind": "sldl",
+      "number": "42",
+      "matchable": true,
+      "sourceURL": "https://example.invalid/maps/legislative-2026"
+    },
+    {
+      "kind": "community_district",
+      "number": "North",
+      "matchable": true,
+      "sourceURL": "https://example.invalid/maps/community-2026"
+    },
+    {
+      "kind": "community_district",
+      "number": "River",
+      "matchable": true,
+      "sourceURL": "https://example.invalid/maps/community-2026"
+    }
+  ]
+}

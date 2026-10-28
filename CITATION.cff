@@ -4,14 +4,14 @@ title: "VP Research Core"
 type: software
 authors:
   - name: "Voters Pulse contributors"
-version: 0.1.0
+version: 0.2.0
 date-released: 2026-10-28
 repository-code: "https://github.com/a2z2913/vp-research-core"
 license: MIT
 abstract: >-
-  A credential-free reference implementation of the pinned Voters Pulse
-  matching arithmetic, with synthetic fixtures and no claim of independent
-  empirical validation.
+  A credential-free reference implementation of pinned matching arithmetic and
+  identifier-level electorate rules, with a curated election-source registry,
+  synthetic fixtures, and no claim of independent empirical validation.
 references:
   - type: software
     title: "Hack for Humanity Team prototype"
