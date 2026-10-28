@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/a2z2913/vp-research-core/schemas/input.schema.json",
+  "title": "Offline race-evaluation input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["race_id", "config", "answers", "candidates"],
+  "properties": {
+    "race_id": {"type": "string", "minLength": 1},
+    "config": {"$ref": "method.schema.json"},
+    "answers": {
+      "type": "object",
+      "additionalProperties": {"enum": ["yea", "nay", "unsure", "skip"]}
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "candidate.schema.json"}
+    }
+  }
+}
+

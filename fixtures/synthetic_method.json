@@ -1,0 +1,19 @@
+{
+  "method_id": "vp-pinned-2122f254-synthetic",
+  "method": {
+    "party_proxy_weight": 0.5,
+    "index_scale": 0.5,
+    "minimum_answers": 2,
+    "cfscore_intercept": -0.098,
+    "cfscore_slope": 0.456,
+    "tie_threshold": 0.03,
+    "star_minimum_own_positions": 4
+  },
+  "questions": [
+    {"id": "synthetic_a", "left_answer": "yes", "active": true, "reviewed": true},
+    {"id": "synthetic_b", "left_answer": "no", "active": true, "reviewed": true},
+    {"id": "synthetic_c", "left_answer": "yes", "active": true, "reviewed": true},
+    {"id": "synthetic_d", "left_answer": "no", "active": true, "reviewed": true}
+  ]
+}
+

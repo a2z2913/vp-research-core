@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/a2z2913/vp-research-core/schemas/method.schema.json",
+  "title": "VP research method configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["method_id", "method", "questions"],
+  "properties": {
+    "method_id": {"type": "string", "minLength": 1},
+    "method": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "party_proxy_weight",
+        "index_scale",
+        "minimum_answers",
+        "cfscore_intercept",
+        "cfscore_slope",
+        "tie_threshold",
+        "star_minimum_own_positions"
+      ],
+      "properties": {
+        "party_proxy_weight": {"type": "number", "minimum": 0, "maximum": 1},
+        "index_scale": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "minimum_answers": {"type": "integer", "minimum": 1},
+        "cfscore_intercept": {"type": "number"},
+        "cfscore_slope": {"type": "number"},
+        "tie_threshold": {"type": "number", "minimum": 0, "maximum": 1},
+        "star_minimum_own_positions": {"type": "integer", "minimum": 1}
+      }
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "left_answer", "active", "reviewed"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "left_answer": {"enum": ["yes", "no", null]},
+          "active": {"type": "boolean"},
+          "reviewed": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}
+

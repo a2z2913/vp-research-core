@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vp-research-core"
+version = "0.1.0"
+description = "Credential-free reference implementation of the Voters Pulse matching arithmetic"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Voters Pulse contributors" }]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.scripts]
+vp-evaluate = "vp_research_core.evaluate:main"
+
+[tool.setuptools]
+packages = ["vp_research_core"]
+

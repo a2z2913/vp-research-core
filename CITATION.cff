@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, cite this repository and the pinned upstream prototype."
+title: "VP Research Core"
+type: software
+authors:
+  - name: "Voters Pulse contributors"
+version: 0.1.0
+date-released: 2026-10-28
+repository-code: "https://github.com/a2z2913/vp-research-core"
+license: MIT
+abstract: >-
+  A credential-free reference implementation of the pinned Voters Pulse
+  matching arithmetic, with synthetic fixtures and no claim of independent
+  empirical validation.
+references:
+  - type: software
+    title: "Hack for Humanity Team prototype"
+    authors:
+      - family-names: "Amlani"
+        given-names: "Sharif"
+    repository-code: "https://github.com/sharifamlani/hack-for-humanity-team"
+    commit: "2122f2545e652970f15d865986896f783e9a05e2"
+

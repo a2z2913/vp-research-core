@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/a2z2913/vp-research-core/schemas/candidate.schema.json",
+  "title": "Candidate evidence record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["candidate_id", "party"],
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1},
+    "party": {"type": "string"},
+    "votes": {
+      "type": "object",
+      "additionalProperties": {"enum": ["yes", "no"]}
+    },
+    "statements": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["stance", "reading"],
+        "properties": {
+          "stance": {"enum": ["yes", "no", "none"]},
+          "reading": {"enum": ["stated", "leans"]}
+        }
+      }
+    },
+    "party_proxy": {
+      "type": "object",
+      "additionalProperties": {"enum": ["yes", "no"]}
+    },
+    "dw_nominate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "votes_scored"],
+      "properties": {
+        "value": {"type": "number", "minimum": -1, "maximum": 1},
+        "votes_scored": {"type": "integer", "minimum": 0},
+        "source_url": {"type": "string", "format": "uri"}
+      }
+    },
+    "cfscore": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "cycle"],
+      "properties": {
+        "value": {"type": "number"},
+        "cycle": {"type": "integer"},
+        "source_url": {"type": "string", "format": "uri"},
+        "source_license": {"type": "string"}
+      }
+    },
+    "words_estimate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "low", "high", "passages"],
+      "properties": {
+        "value": {"type": "number", "minimum": -1, "maximum": 1},
+        "low": {"type": "number", "minimum": -1, "maximum": 1},
+        "high": {"type": "number", "minimum": -1, "maximum": 1},
+        "passages": {"type": "integer", "minimum": 0},
+        "why": {"type": "string", "maxLength": 300},
+        "model": {"type": "string"},
+        "generated_at": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}
+

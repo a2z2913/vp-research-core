@@ -1,0 +1,42 @@
+{
+  "method_id": "vp-pinned-2122f254-synthetic",
+  "race_id": "synthetic-race-001",
+  "result": {
+    "best_candidate_id": "synthetic-alpha",
+    "best_own_positions": 3,
+    "ranking": [
+      {
+        "agree_share": 0.7142857142857143,
+        "candidate_id": "synthetic-alpha",
+        "line_closeness": 0.75,
+        "own_positions": 3,
+        "proxy_positions": 1,
+        "score": 0.7321428571428572
+      },
+      {
+        "agree_share": 0.5,
+        "candidate_id": "synthetic-beta",
+        "line_closeness": 0.902,
+        "own_positions": 4,
+        "proxy_positions": 0,
+        "score": 0.7010000000000001
+      }
+    ],
+    "scored": true,
+    "starred": false,
+    "thin": true,
+    "tie": false,
+    "unscored_candidate_ids": ["synthetic-gamma"]
+  },
+  "voter_placement": {
+    "answers": 4,
+    "cycle": null,
+    "high": null,
+    "low": null,
+    "raw": null,
+    "source": "positions",
+    "why": null,
+    "x": 0.0
+  }
+}
+
